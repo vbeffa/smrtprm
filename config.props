@@ -1,0 +1,5 @@
+# path to store key pair
+key_store_path = /tmp
+
+# size of key in bits, used as argument to KeyPairGenerator
+key_size = 1024
