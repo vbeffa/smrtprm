@@ -1,3 +1,4 @@
+#!/bin/bash
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: ./rsa_signer message_to_sign"
