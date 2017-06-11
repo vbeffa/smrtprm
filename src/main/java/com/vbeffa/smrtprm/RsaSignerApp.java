@@ -26,10 +26,11 @@ class RsaSignerApp {
 
         String message = args[0];
         if (!KeyStore.keysExist(publicKeyFile(), privateKeyFile())) {
+            System.out.println("Key pair not found on disk. Creating.");
             KeyStore.save(KeyGen.generate(keySize), publicKeyFile(), privateKeyFile());
         }
         KeyPair keys = KeyStore.load(publicKeyFile(), privateKeyFile());
-        String json = Formatter.toJson(message, Signer.sign(keys.getPrivate(), message), keys.getPublic().getEncoded());
+        String json = Formatter.toJson(message, Signer.sign(message, keys.getPrivate()), keys.getPublic().getEncoded());
         System.out.println(json);
     }
 

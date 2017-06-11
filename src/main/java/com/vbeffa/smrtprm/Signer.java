@@ -14,8 +14,20 @@ import javax.crypto.NoSuchPaddingException;
  * @author vlad.beffa
  */
 public class Signer {
-
-    static byte[] sign(PrivateKey privateKey, String message) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, SignatureException {
+    /**
+     * Signs a message using the given private key and the SHA256 digest of the input.
+     * 
+     * @param message
+     * @param privateKey
+     * @return signed bytes
+     * @throws NoSuchAlgorithmException
+     * @throws NoSuchPaddingException
+     * @throws InvalidKeyException
+     * @throws IllegalBlockSizeException
+     * @throws BadPaddingException
+     * @throws SignatureException 
+     */
+    static byte[] sign(String message, PrivateKey privateKey) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, SignatureException {
         Signature signature = Signature.getInstance("SHA256withRSA");
         signature.initSign(privateKey);
         signature.update(message.getBytes());

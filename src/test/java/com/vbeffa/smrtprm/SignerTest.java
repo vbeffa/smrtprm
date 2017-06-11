@@ -17,7 +17,7 @@ public class SignerTest {
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
         kpg.initialize(1024);
         KeyPair keys = kpg.generateKeyPair();
-        byte[] signed = Signer.sign(keys.getPrivate(), "howdy");
+        byte[] signed = Signer.sign("howdy", keys.getPrivate());
         Signature signature = Signature.getInstance("SHA256withRSA");
         signature.initVerify(keys.getPublic());
         signature.update("howdy".getBytes());
