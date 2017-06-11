@@ -17,5 +17,4 @@ public class FormatterTest {
         String result = Formatter.toJson(message, signature, publicKey);
         assertEquals(expResult, result);
     }
-
 }
