@@ -1,5 +1,8 @@
 # path to store key pair
 key_store_path = /tmp
 
+# max message length this signer should accept
+max_message_len = 250
+
 # size of key in bits, used as argument to KeyPairGenerator
 key_size = 1024

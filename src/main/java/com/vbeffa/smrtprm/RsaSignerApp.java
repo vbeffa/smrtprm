@@ -22,9 +22,15 @@ class RsaSignerApp {
         }
 
         CONFIG.load(new FileInputStream(CONFIG_FILE));
+        int maxMessageLen = Integer.parseInt(CONFIG.getProperty("max_message_len"));
         int keySize = Integer.parseInt(CONFIG.getProperty("key_size"));
 
         String message = args[0];
+        if (message.length() > maxMessageLen) {
+            System.out.println("Max message length is " + maxMessageLen + " (received " + message.length() + ").");
+            System.exit(-1);
+        }
+        
         if (!KeyStore.keysExist(publicKeyFile(), privateKeyFile())) {
             System.out.println("Key pair not found on disk. Creating.");
             KeyStore.save(KeyGen.generate(keySize), publicKeyFile(), privateKeyFile());
