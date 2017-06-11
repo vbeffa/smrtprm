@@ -17,7 +17,7 @@ class RsaSignerApp {
 
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
-            System.out.println("Usage: Foo <message>");
+            System.out.println("Usage: RsaSignerApp <message>");
             System.exit(-1);
         }
 
