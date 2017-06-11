@@ -15,3 +15,7 @@ Implementation notes:
 - The private key file is written with 600 permissions (i.e., `-rw-------`).
 - Max message length can be configured using the `max_message_len` property.
 - Key size can be configured using the `key_size` property.
+
+CI:
+
+- [CircleCI](https://circleci.com/gh/vbeffa/smrtprm/tree/master)
