@@ -6,10 +6,6 @@ import java.security.Signature;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author vlad.beffa
- */
 public class SignerTest {
     
     @Test

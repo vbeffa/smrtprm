@@ -15,7 +15,7 @@ import javax.crypto.NoSuchPaddingException;
  */
 public class Signer {
     /**
-     * Signs a message using the given private key and the SHA256 digest of the input.
+     * Signs a message using the given private key and the message's SHA256 digest.
      * 
      * @param message
      * @param privateKey

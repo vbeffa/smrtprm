@@ -3,6 +3,7 @@ package com.vbeffa.smrtprm;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.security.Key;
 import java.security.KeyPair;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
@@ -10,10 +11,6 @@ import java.security.PublicKey;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author vlad.beffa
- */
 public class KeyStoreTest {
 
     @Test
@@ -39,6 +36,14 @@ public class KeyStoreTest {
         File privateKeyFile = new File("/tmp/foo");
         Files.deleteIfExists(publicKeyFile.toPath());
         Files.deleteIfExists(privateKeyFile.toPath());
+
+        class TestKey implements Key {
+            @Override public String getAlgorithm() { return "testAlgorithm"; }
+            @Override public String getFormat() { return "testFormat"; }
+            @Override public byte[] getEncoded() { return new byte[0]; }
+        }
+        class TestPublicKey extends TestKey implements PublicKey {}
+        class TestPrivateKey extends TestKey implements PrivateKey {}
 
         PublicKey publicKey = new TestPublicKey();
         PrivateKey privateKey = new TestPrivateKey();
