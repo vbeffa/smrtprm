@@ -1,4 +1,7 @@
+package com.vbeffa.smrtprm;
 
+
+import com.vbeffa.smrtprm.Formatter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
