@@ -20,7 +20,6 @@ public class FormatterTest {
                 + "    \"pubkey\":\"-----BEGIN PUBLIC KEY-----\\nZmFrZSBwdWJsaWMga2V5IDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEy\\nMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MA==\\n-----END PUBLIC KEY-----\\n\"\n"
                 + "}";
         String result = Formatter.toJson(message, signature, publicKey);
-        System.out.println(result);
         assertEquals(expResult, result);
     }
 
