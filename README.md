@@ -16,6 +16,10 @@ Implementation notes:
 - Max message length can be configured using the `max_message_len` property.
 - Key size can be configured using the `key_size` property.
 
+Build:
+
+- `mvn clean install`
+
 CI:
 
 - [CircleCI](https://circleci.com/gh/vbeffa/smrtprm/tree/master)
