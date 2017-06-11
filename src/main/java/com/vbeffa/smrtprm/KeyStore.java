@@ -15,21 +15,41 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 
-/**
- *
- * @author vlad.beffa
- */
 public class KeyStore {
-
+    /**
+     * Checks if the key files are not null and exist on disk.
+     * 
+     * @param publicKeyFile
+     * @param privateKeyFile
+     * @return true if both key files exist; false otherwise
+     */
     static boolean keysExist(File publicKeyFile, File privateKeyFile) {
         return privateKeyFile != null && privateKeyFile.exists() && publicKeyFile != null && publicKeyFile.exists();
     }
 
+    /**
+     * Saves a key pair to disk. Overwrites any existing files.
+     * 
+     * @param keyPair
+     * @param publicKeyFile
+     * @param privateKeyFile
+     * @throws IOException 
+     */
     static void save(KeyPair keyPair, File publicKeyFile, File privateKeyFile) throws IOException {
         Files.write(publicKeyFile.toPath(), Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded()).getBytes());
         Files.write(privateKeyFile.toPath(), Base64.getEncoder().encodeToString(keyPair.getPrivate().getEncoded()).getBytes());
     }
 
+    /**
+     * Loads a key pair from disk.
+     * 
+     * @param publicKeyFile
+     * @param privateKeyFile
+     * @return the loaded key pair
+     * @throws NoSuchAlgorithmException
+     * @throws InvalidKeySpecException
+     * @throws IOException 
+     */
     static KeyPair load(File publicKeyFile, File privateKeyFile) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         KeyFactory kf = KeyFactory.getInstance("RSA");
         Path p;

@@ -6,8 +6,9 @@ import java.security.KeyPair;
 import java.util.Properties;
 
 /**
- *
- * @author vlad.beffa
+ * Main class for the application. If a key pair does not yet exist in the configured directory (see key_store_path in
+ * config.props in the project root directory), creates it and then loads it from disk. Otherwise loads the key pair,
+ * signs the message, and prints the result to standard out.
  */
 class RsaSignerApp {
 

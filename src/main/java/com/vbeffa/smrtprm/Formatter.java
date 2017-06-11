@@ -2,12 +2,15 @@ package com.vbeffa.smrtprm;
 
 import java.util.Base64;
 
-/**
- *
- * @author vlad.beffa
- */
 public class Formatter {
-
+    /**
+     * Formats a message, signature, and public key in JSON format.
+     *
+     * @param message message being signed
+     * @param signature message signature
+     * @param publicKey public key of the private key used to sign the message
+     * @return string in JSON format
+     */
     static String toJson(String message, byte[] signature, byte[] publicKey) {
         return "{\n"
                 + "    \"message\":\"" + message + "\",\n"
