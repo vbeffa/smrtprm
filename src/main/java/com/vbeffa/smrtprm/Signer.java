@@ -9,10 +9,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
-/**
- *
- * @author vlad.beffa
- */
 public class Signer {
     /**
      * Signs a message using the given private key and the message's SHA256 digest.
