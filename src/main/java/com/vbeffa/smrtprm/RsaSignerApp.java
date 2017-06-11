@@ -11,7 +11,6 @@ import java.util.Properties;
  * signs the message, and prints the result to standard out.
  */
 class RsaSignerApp {
-
     private static final Properties CONFIG = new Properties();
     private static final File CONFIG_FILE = new File("./config.props");
 

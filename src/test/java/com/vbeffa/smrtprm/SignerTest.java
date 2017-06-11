@@ -7,7 +7,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SignerTest {
-
     @Test
     public void testSign() throws Exception {
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");

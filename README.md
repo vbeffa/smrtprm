@@ -10,4 +10,8 @@ To sign a message from the command line, use the rsa_signer.sh script:
 
 Implementation notes:
 
-- The private key file is written with 600 permissions (i.e., -rw-------).
+- In order to promote immutability, all methods are static, making classes stateless (except for the static constants
+  in `RsaSignerApp`).
+- The private key file is written with 600 permissions (i.e., `-rw-------`).
+- Max message length can be configured using the `max_message_len` property.
+- Key size can be configured using the `key_size` property.

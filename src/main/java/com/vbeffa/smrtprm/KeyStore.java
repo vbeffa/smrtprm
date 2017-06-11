@@ -19,7 +19,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class KeyStore {
-
     /**
      * Checks if the key files are not null and exist on disk.
      *

@@ -12,7 +12,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class KeyStoreTest {
-
     @Test
     public void testKeysExist() throws IOException {
         File publicKeyFile = null;

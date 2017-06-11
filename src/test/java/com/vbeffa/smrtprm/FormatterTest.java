@@ -4,7 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FormatterTest {
-
     @Test
     public void testToJson() {
         String message = "howdy";
