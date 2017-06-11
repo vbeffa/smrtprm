@@ -1,12 +1,5 @@
 package com.vbeffa.smrtprm;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import main.java.com.vbeffa.smrtprm.KeyStore;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +7,6 @@ import java.security.KeyPair;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-import java.security.spec.InvalidKeySpecException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

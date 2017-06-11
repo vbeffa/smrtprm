@@ -1,6 +1,5 @@
 package com.vbeffa.smrtprm;
 
-
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;

@@ -1,16 +1,16 @@
 package com.vbeffa.smrtprm;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.security.KeyPair;
 import java.util.Properties;
 
 /**
- * 
+ *
  * @author vlad.beffa
  */
 class RsaSignerApp {
+
     private static final Properties CONFIG = new Properties();
     private static final File CONFIG_FILE = new File("./config.props");
 

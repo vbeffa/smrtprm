@@ -1,6 +1,5 @@
 package com.vbeffa.smrtprm;
 
-
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
